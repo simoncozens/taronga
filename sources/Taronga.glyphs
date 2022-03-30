@@ -1,5 +1,8 @@
 {
 .appVersion = "3072";
+DisplayStrings = (
+"/ydieresis"
+);
 customParameters = (
 {
 name = fsType;
@@ -649,6 +652,7 @@ unicode = 00CA;
 },
 {
 glyphname = Edieresis;
+lastChange = "2022-03-30 10:58:30 +0000";
 layers = (
 {
 components = (
@@ -657,6 +661,7 @@ name = E;
 },
 {
 name = dieresiscomb;
+transform = "{1, 0, 0, 1, 114, 180}";
 }
 );
 layerId = "93816207-4067-4C42-B3DC-B8F9D15DA403";
@@ -1364,6 +1369,7 @@ unicode = 00D4;
 },
 {
 glyphname = Odieresis;
+lastChange = "2022-03-30 10:58:17 +0000";
 layers = (
 {
 components = (
@@ -1372,6 +1378,7 @@ name = O;
 },
 {
 name = dieresiscomb;
+transform = "{1, 0, 0, 1, 139, 170}";
 }
 );
 layerId = "93816207-4067-4C42-B3DC-B8F9D15DA403";
@@ -1862,6 +1869,7 @@ unicode = 00DB;
 },
 {
 glyphname = Udieresis;
+lastChange = "2022-03-30 10:58:38 +0000";
 layers = (
 {
 components = (
@@ -1870,6 +1878,7 @@ name = U;
 },
 {
 name = dieresiscomb;
+transform = "{1, 0, 0, 1, 135, 104}";
 }
 );
 layerId = "93816207-4067-4C42-B3DC-B8F9D15DA403";
@@ -2996,6 +3005,7 @@ unicode = 00EA;
 },
 {
 glyphname = edieresis;
+lastChange = "2022-03-30 10:58:47 +0000";
 layers = (
 {
 components = (
@@ -3004,6 +3014,7 @@ name = e;
 },
 {
 name = dieresiscomb;
+transform = "{1, 0, 0, 1, 80, 0}";
 }
 );
 layerId = "93816207-4067-4C42-B3DC-B8F9D15DA403";
@@ -3906,6 +3917,7 @@ unicode = 00F4;
 },
 {
 glyphname = odieresis;
+lastChange = "2022-03-30 10:58:53 +0000";
 layers = (
 {
 components = (
@@ -3914,6 +3926,7 @@ name = o;
 },
 {
 name = dieresiscomb;
+transform = "{1, 0, 0, 1, 91, 0}";
 }
 );
 layerId = "93816207-4067-4C42-B3DC-B8F9D15DA403";
@@ -4689,6 +4702,7 @@ unicode = 00FD;
 },
 {
 glyphname = ydieresis;
+lastChange = "2022-03-30 10:59:04 +0000";
 layers = (
 {
 components = (
@@ -4696,8 +4710,9 @@ components = (
 name = y;
 },
 {
+alignment = -1;
 name = dieresiscomb;
-transform = "{1, 0, 0, 1, 261, 3}";
+transform = "{1, 0, 0, 1, 87, 3}";
 }
 );
 layerId = "93816207-4067-4C42-B3DC-B8F9D15DA403";
@@ -6849,5 +6864,5 @@ oV = "75";
 };
 };
 versionMajor = 1;
-versionMinor = 1;
+versionMinor = 2;
 }
