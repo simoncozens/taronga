@@ -128,6 +128,8 @@ jobs:
           path: "googlefonts"
       - name: Do SSH magic
         run: cd googlefonts; git remote add googlefonts git@github.com:google/fonts.git ; cd ..
+      - name: Test fetch
+        run: cd googlefonts; git fetch googlefonts main ; cd ..
       - name: Run the packager
         run: gftools packager upstream.yaml googlefonts -p -y
 
