@@ -25,7 +25,7 @@ jobs:
       - id: bumpchecker
         name: Check if version has bumped
         run: python3 -m gftools.actions.checkversionbump
-      - id: is_gf
+      - id: gfchecker
         name: Check if this font should be submitted to Google Fonts
         run: python3 -m gftools.actions.checkgooglefonts
 
