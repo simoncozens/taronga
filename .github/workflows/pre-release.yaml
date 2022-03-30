@@ -87,7 +87,7 @@ jobs:
       - name: Tell user about release
         run: echo '::notice file=sources/config.yaml,title=A new release ${{ needs.check.outputs.newtag }} has been created'
       - name: Create release bundle
-        run: zip -r ${{ env.ZIP_NAME }}.zip fonts/ README.md *.txt DESCRIPTION.en.html
+        run: zip -r ${{ env.ZIP_NAME }}.zip fonts/ README.md *.txt DESCRIPTION.en_us.html
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         id: upload
