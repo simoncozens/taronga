@@ -40,7 +40,7 @@ freetype-py==2.2.0
 fs==2.4.15
 gfdiffbrowsers==0.1.7
 gflanguages==0.4.0
-git+https://github.com/simoncozens/gftools@actions#egg=gftools
+gftools==0.5.3.dev460+g8e104bc
 gitdb==4.0.9
 GitPython==3.1.27
 glyphsets==0.2.1
