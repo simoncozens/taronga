@@ -115,6 +115,13 @@ jobs:
             echo "::error file=sources/config.yaml,title=SSH_KEY was not set in repository secrets::Generate an SSH key (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key), add the public key to your GitHub account (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and add the private key to an environment secret called SSH_KEY in an environment called 'googlefonts' by going to $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/settings/secrets/actions";
             exit 1
           fi
+      - name: Check USER_GITHUB_TOKEN is set
+        run: |
+          if [[ "${{ secrets.USER_GITHUB_TOKEN }}" == "" ]];
+          then
+            echo "::error file=sources/config.yaml,title=USER_GITHUB_TOKEN was not set in repository secrets::Generate a personal access token with a repo scope by visiting https://github.com/settings/tokens/new and add it to an environment secret called USER_GITHUB_TOKEN in an environment called 'googlefonts' by going to $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/settings/secrets/actions";
+            exit 1
+          fi
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
@@ -147,4 +154,7 @@ jobs:
         run: cd googlefonts; git fetch googlefonts main ; cd ..
       - name: Run the packager
         run: gftools packager upstream.yaml googlefonts -p -y
+        env:
+          GH_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.USER_GITHUB_TOKEN }}
 
