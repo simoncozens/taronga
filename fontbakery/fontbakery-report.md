@@ -2,62 +2,14 @@
 
 Fontbakery version: 0.8.8
 
-<details><summary><b>[17] Taronga-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking OS/2 fsType does not impose restrictions. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/fstype">com.google.fonts/check/fstype</a>)</summary><div>
-
-
-* 🔥 **FAIL** In this font fsType is set to 8 meaning that:
-The font may be embedded but must only be installed temporarily on other systems.
-
-No such DRM restrictions can be enabled on the Google Fonts collection, so the fsType field must be set to zero (Installable Embedding) instead. [code: drm]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check `Google Fonts Latin Core` glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 🔥 **FAIL** Missing required codepoints:
-
-	- 0x0021 (EXCLAMATION MARK)
-
-	- 0x0022 (QUOTATION MARK)
-
-	- 0x0023 (NUMBER SIGN)
-
-	- 0x0024 (DOLLAR SIGN)
-
-	- 0x0025 (PERCENT SIGN)
-
-	- 0x0026 (AMPERSAND)
-
-	- 0x0027 (APOSTROPHE)
-
-	- 0x0028 (LEFT PARENTHESIS)
-
-	- 0x0029 (RIGHT PARENTHESIS)
-
-	- 0x002A (ASTERISK)
- 
-	- And 134 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: missing-codepoints]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check license file has good copyright string. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/license/OFL_copyright">com.google.fonts/check/license/OFL_copyright</a>)</summary><div>
+<details><summary><b>[12] Taronga-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Check license file has good copyright string. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/license/OFL_copyright">com.google.fonts/check/license/OFL_copyright</a>)</summary><div>
 
 
 * 🔥 **FAIL** First line in license file does not match expected format: "copyright 20** the my font project authors (https://github.com/googlefonts/my-font-repository)"
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** Font lacks NameID 13 (LICENSE DESCRIPTION). A proper licensing entry must be set. [code: missing]
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/ttf/Taronga-Regular.ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 936, but got 900 instead [code: ascent]
-* 🔥 **FAIL** OS/2.usWinDescent value should be equal or greater than 309, but got 300 instead. [code: descent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Font contains glyphs for whitespace characters? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/whitespace_glyphs">com.google.fonts/check/whitespace_glyphs</a>)</summary><div>
-
-
-* 🔥 **FAIL** Whitespace glyph missing for codepoint 0x00A0. [code: missing-whitespace-glyph-0x00A0]
 </div></details><details><summary>⚠ <b>WARN:</b> Checking OS/2 achVendID. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/googlefonts.html#com.google.fonts/check/vendor_id">com.google.fonts/check/vendor_id</a>)</summary><div>
 
 
@@ -82,26 +34,28 @@ Use -F or --full-lists to disable shortening of long lists. [code: missing-codep
 
 
 * ⚠ **WARN** The following glyphs could not be reached by codepoint or substitution rules:
-	- t_t
+	- t_t 
+	- And .null
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
 
+* ⚠ **WARN** This font has a 'Soft Hyphen' character (codepoint 0x00AD) which is supposed to be zero-width and invisible, and is used to mark a hyphenation possibility within a word in the absence of or overriding dictionary hyphenation. It is mostly an obsolete mechanism now, and the character is only included in fonts for legacy codepage coverage. [code: softhyphen]
 * ⚠ **WARN** This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.
 
 The following glyphs do not have the recommended number of contours:
 
-	- Glyph name: two	Contours detected: 0	Expected: 1
-	- Glyph name: three	Contours detected: 0	Expected: 1
-	- Glyph name: four	Contours detected: 0	Expected: 1 or 2
-	- Glyph name: five	Contours detected: 0	Expected: 1
-	- Glyph name: six	Contours detected: 0	Expected: 1 or 2
-	- Glyph name: seven	Contours detected: 0	Expected: 1
-	- Glyph name: eight	Contours detected: 0	Expected: 3
-	- Glyph name: nine	Contours detected: 0	Expected: 1 or 2
-	- Glyph name: periodcentered	Contours detected: 0	Expected: 1
-	- Glyph name: gravecomb	Contours detected: 0	Expected: 1 
-	- And 12 more.
+	- Glyph name: exclam	Contours detected: 0	Expected: 2
+	- Glyph name: quotedbl	Contours detected: 0	Expected: 2
+	- Glyph name: numbersign	Contours detected: 0	Expected: 2
+	- Glyph name: dollar	Contours detected: 0	Expected: 1 or 3
+	- Glyph name: percent	Contours detected: 0	Expected: 5
+	- Glyph name: ampersand	Contours detected: 0	Expected: 1, 2 or 3
+	- Glyph name: quotesingle	Contours detected: 0	Expected: 1
+	- Glyph name: parenleft	Contours detected: 0	Expected: 1
+	- Glyph name: parenright	Contours detected: 0	Expected: 1
+	- Glyph name: asterisk	Contours detected: 0	Expected: 1 or 4 
+	- And 268 more.
 
 Use -F or --full-lists to disable shortening of long lists.
  [code: contour-count]
@@ -122,7 +76,7 @@ Use -F or --full-lists to disable shortening of long lists.
 	* E (U+0045): X=397.0,Y=-1.5 (should be at baseline 0?)
 	* E (U+0045): X=128.0,Y=-2.0 (should be at baseline 0?)
 	* E (U+0045): X=110.0,Y=-2.0 (should be at baseline 0?)
-	* F (U+0046): X=164.0,Y=718.0 (should be at cap-height 720?) and 52 more.
+	* F (U+0046): X=164.0,Y=718.0 (should be at cap-height 720?) and 90 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-misalignments]
 </div></details><details><summary>⚠ <b>WARN:</b> Do any segments have colinear vectors? (<a href="https://font-bakery.readthedocs.io/en/latest/fontbakery/profiles/<Section: Outline Correctness Checks>.html#com.google.fonts/check/outline_colinear_vectors">com.google.fonts/check/outline_colinear_vectors</a>)</summary><div>
@@ -142,8 +96,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 0 | 7 | 10 | 110 | 7 | 91 | 0 |
-| 0% | 3% | 4% | 49% | 3% | 40% | 0% |
+| 0 | 2 | 10 | 107 | 7 | 99 | 0 |
+| 0% | 1% | 4% | 48% | 3% | 44% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
