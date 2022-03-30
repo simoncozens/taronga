@@ -85,7 +85,7 @@ jobs:
           tag_name: ${{ needs.check.outputs.newtag }}
           release_name: ${{ needs.check.outputs.newtag }}
       - name: Tell user about release
-        run: echo '::notice file=sources/config.yaml,title=A new release has been created::Go to ${{github.server_url}}/${{ github.repository }}/releases/ to publish it'
+        run: echo '::notice file=sources/config.yaml,title=A new release ${{ needs.check.outputs.newtag }} has been created'
       - name: Create release bundle
         run: zip -r ${{ env.ZIP_NAME }}.zip fonts/ README.md *.txt DESCRIPTION.en.html
       - name: Upload binaries to release
@@ -95,7 +95,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ${{ env.ZIP_NAME }}.zip
           asset_name: ${{ env.ZIP_NAME }}-${{ needs.check.outputs.newtag }}.zip
-          tag: ${{ github.ref }}
+          tag: ${{ needs.check.outputs.newtag }}
           overwrite: true
           body: "Production ready fonts"
 
