@@ -1,0 +1,11 @@
+name: Taronga
+repository_url: https://github.com/simoncozens/taronga.git
+archive: https://github.com/simoncozens/taronga/releases/download/v1.009/taronga-v1.009.zip
+branch: main
+category:
+- SANS_SERIF
+files:
+  OFL.txt: OFL.txt
+  DESCRIPTION.en_us.html: DESCRIPTION.en_us.html
+  fonts/ttf/Taronga-Regular.ttf: Taronga-Regular.ttf
+designer: Simon Cozens
