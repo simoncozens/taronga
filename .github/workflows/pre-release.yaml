@@ -105,7 +105,7 @@ jobs:
     needs:
       - check
       - test_and_release
-    if: needs.check.outputs.is_gf == "true" && needs.test_and_release.outputs.url
+    if: needs.check.outputs.is_gf == 'true' && needs.test_and_release.outputs.url
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
