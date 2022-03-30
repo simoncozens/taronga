@@ -108,9 +108,13 @@ jobs:
       - test_and_release
     if: needs.check.outputs.is_gf == 'true' && needs.test_and_release.outputs.url
     steps:
-      - if: ${{ ! secrets.SSH_KEY }}
-        name: Check SSH_KEY is set
-        run: echo "::error file=sources/config.yaml,title=SSH_KEY was not set in repository secrets::Generate an SSH key (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key), add the public key to your GitHub account (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and add the private key to an environment secret called SSH_KEY in an environment called 'googlefonts' by going to $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/settings/secrets/actions"; exit 1
+      - name: Check SSH_KEY is set
+        run: |
+          if [[ "${{ secrets.SSH_KEY }}" == "" ]];
+          then
+            echo "::error file=sources/config.yaml,title=SSH_KEY was not set in repository secrets::Generate an SSH key (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key), add the public key to your GitHub account (https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and add the private key to an environment secret called SSH_KEY in an environment called 'googlefonts' by going to $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/settings/secrets/actions";
+            exit 1
+          fi
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
