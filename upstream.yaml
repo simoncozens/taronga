@@ -1,6 +1,6 @@
 name: Taronga
 repository_url: https://github.com/simoncozens/taronga.git
-archive: https://github.com/simoncozens/taronga/releases/download/v1.009/taronga-v1.009.zip
+archive: https://github.com/simoncozens/taronga/releases/download/v1.010/taronga-v1.010.zip
 branch: main
 category:
 - SANS_SERIF
